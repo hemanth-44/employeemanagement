@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+    
+    <bean id="emp9" class="entities.Employee">
+        
+        <property name="employeeId" value="12345"/>
+        <property name="employeeName" value="Hemanth"/>
+        <property name="salary" value="30000"/>
+        <property name="businessUnit" value="Pes-Bu"/>
+        <property name="age" value="23"/>
+    
+    </bean>
+    <bean id="em1" class="entities.Employee" >
+<property name="employeeId" value="123456" />
+<property name="employeeName" value="Harriet" />
+<property name="salary" value="40000.00" />
+<property name="businessUnit" value="PES-BU" />
+<property name="age" value="30" />
+</bean>
+<bean id="em2" class="entities.Employee" >
+<property name="employeeId" value="123457" />
+<property name="employeeName" value="barrit" />
+<property name="salary" value="40000.00" />
+<property name="businessUnit" value="PES-BU" />
+<property name="age" value="30" />
+</bean>
+    
+    <bean id="sbu1" class="entities.sbu" >
+<property name="sbucode" value="PES-BU" />
+<property name="sbuName" value="Engineering services" />
+<property name="sbuHead" value="Kiran Rao" />
+<property name="emplist">
+        <list value-type="java.util.List">
+            <ref bean="em1"/>
+            <ref bean="em2"/>
+        </list>
+        </property>
+</bean>
+
+    
+
+
+</beans>
